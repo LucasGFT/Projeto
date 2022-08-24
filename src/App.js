@@ -14,6 +14,7 @@ class App extends React.Component {
     cardTrunfo: false,
     isSaveButtonDisabled: true,
     cartas: [],
+    hasTrunfo: false,
   };
 
   // voltarState = () => {
@@ -44,7 +45,8 @@ class App extends React.Component {
       cardName,
       cardDescription,
       cardImage,
-      cardAttr1, cardAttr2, cardAttr3, cardRare, cardTrunfo, cartas } = this.state;
+      cardAttr1,
+      cardAttr2, cardAttr3, cardRare, cardTrunfo, cartas } = this.state;
     const carta = cartas;
     const obj = {
       cardName,
@@ -64,11 +66,12 @@ class App extends React.Component {
         cardName: '',
         cardDescription: '',
         cardImage: '',
-        cardAttr1: 0,
-        cardAttr2: 0,
-        cardAttr3: 0,
+        cardAttr1: '0',
+        cardAttr2: '0',
+        cardAttr3: '0',
         cardRare: 'normal',
       });
+      if (cardTrunfo) { this.setState({ hasTrunfo: true }); }
     });
   };
 
@@ -117,6 +120,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       isSaveButtonDisabled,
+      hasTrunfo,
     } = this.state;
     return (
       <div>
@@ -132,6 +136,7 @@ class App extends React.Component {
           cardRare={ cardRare }
           isSaveButtonDisabled={ isSaveButtonDisabled }
           onSaveButtonClick={ this.salvarCartas }
+          hasTrunfo={ hasTrunfo }
         />
         <Card
           cardName={ cardName }
