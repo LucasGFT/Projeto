@@ -17,15 +17,6 @@ class App extends React.Component {
     hasTrunfo: false,
   };
 
-  // voltarState = () => {
-  //   const {
-  //     cardName,
-  //     cardDescription,
-  //     cardImage,
-  //     cardAttr1, cardAttr2, cardAttr3, cardRare, cardTrunfo, cartas } = this.state;
-  //     this.setState();
-  // };
-
   validacao = (num) => {
     const maiorNumero = 90;
     if (Number(num) >= 0 && Number(num) <= maiorNumero) {
@@ -121,6 +112,7 @@ class App extends React.Component {
       cardTrunfo,
       isSaveButtonDisabled,
       hasTrunfo,
+      cartas,
     } = this.state;
     return (
       <div>
@@ -148,6 +140,20 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
         />
+        {
+          cartas.map((element) => (
+            <Card
+              cardName={ element.cardName }
+              cardDescription={ element.cardDescription }
+              cardImage={ element.cardImage }
+              cardAttr1={ element.cardAttr1 }
+              cardAttr2={ element.cardAttr2 }
+              cardAttr3={ element.cardAttr3 }
+              cardTrunfo={ element.cardTrunfo }
+              cardRare={ element.cardRare }
+              key={ element.cardName }
+            />))
+        }
       </div>
     );
   }
