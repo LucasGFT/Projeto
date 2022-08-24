@@ -13,7 +13,17 @@ class App extends React.Component {
     cardRare: 'normal',
     cardTrunfo: false,
     isSaveButtonDisabled: true,
+    cartas: [],
   };
+
+  // voltarState = () => {
+  //   const {
+  //     cardName,
+  //     cardDescription,
+  //     cardImage,
+  //     cardAttr1, cardAttr2, cardAttr3, cardRare, cardTrunfo, cartas } = this.state;
+  //     this.setState();
+  // };
 
   validacao = (num) => {
     const maiorNumero = 90;
@@ -27,6 +37,39 @@ class App extends React.Component {
     if (Number(num1) + Number(num2) + Number(num3) <= maiorNumero) {
       return true;
     }
+  };
+
+  salvarCartas = () => {
+    const {
+      cardName,
+      cardDescription,
+      cardImage,
+      cardAttr1, cardAttr2, cardAttr3, cardRare, cardTrunfo, cartas } = this.state;
+    const carta = cartas;
+    const obj = {
+      cardName,
+      cardDescription,
+      cardImage,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardRare,
+      cardTrunfo,
+    };
+    const juncao = (cart, objs) => [...cart, objs];
+    this.setState({
+      cartas: juncao(carta, obj),
+    }, () => {
+      this.setState({
+        cardName: '',
+        cardDescription: '',
+        cardImage: '',
+        cardAttr1: 0,
+        cardAttr2: 0,
+        cardAttr3: 0,
+        cardRare: 'normal',
+      });
+    });
   };
 
   haveChange = (event) => {
@@ -88,6 +131,7 @@ class App extends React.Component {
           cardAttr3={ cardAttr3 }
           cardRare={ cardRare }
           isSaveButtonDisabled={ isSaveButtonDisabled }
+          onSaveButtonClick={ this.salvarCartas }
         />
         <Card
           cardName={ cardName }
