@@ -1,0 +1,138 @@
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.FormularioECarta {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.form {
+  background-color: rgb(245, 216, 173);
+  margin-left: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: center;
+  width: 300px;
+}
+
+.card {
+  padding-top: 15px;
+  width: 300px;
+}
+
+.cardd {
+  background-color: rgb(224, 245, 245);
+  height: 631px;
+  text-align: center;
+}
+
+.cardd img {
+  max-height: 200px;
+  max-width: 280px;
+}
+
+.form * {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.cardResult {
+  background-color: rgb(182, 211, 197);
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.image-card-result {
+  display: flex;
+  justify-content: space-around;
+}
+
+.image-card-result img {
+  max-height: 200px;
+  max-width: 280px;
+}
+
+.carta {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+}
+
+.cardsSalvo {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.cartasSalvas {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonSalvarForm {
+  background-color: #333;
+  border: 1px solid #333;
+  color: white;
+  padding: 6px 12px;
+}
+
+.buttonSalvarForm:hover {
+  background-color: #161111;
+  color: white;
+}
+
+.buttonRemoverCard {
+  background-color: #ca2b2bde;
+  border: 1px solid #333;
+  color: white;
+  display: flex;
+  padding: 6px 12px;
+  width: 25%;
+}
+
+.buttonRemoverCard:hover {
+  background-color: #7c0000;
+  color: white;
+}
+
+.removerTodasCartas {
+  background-color: black;
+  border: 1px solid #333;
+  color: white;
+  cursor: pointer;
+  padding: 6px 12px;
+  width: 150px;
+}
+
+.cardResults {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact img {
+  margin-right: 10px;
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.contact {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.contact h3 {
+  margin-right: 10px;
+}

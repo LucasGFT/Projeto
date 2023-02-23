@@ -18,10 +18,11 @@ class Form extends React.Component {
       onSaveButtonClick,
     } = this.props;
     return (
-      <div>
+      <div className="form">
         <form>
           <label htmlFor="nome-carta">
-            Nome da Carta:
+            Nome:
+            <br />
             <input
               name="cardName"
               id="nome-carta"
@@ -33,7 +34,8 @@ class Form extends React.Component {
           </label>
           <br />
           <label htmlFor="descricao-carta">
-            Descricao da Carta:
+            Descricao:
+            <br />
             <textarea
               name="cardDescription"
               id="descricao-carta"
@@ -53,6 +55,8 @@ class Form extends React.Component {
               data-testid="attr1-input"
               value={ cardAttr1 }
               onChange={ onInputChange }
+              max="90"
+              placeholder="1 a 90"
             />
           </label>
           <br />
@@ -65,6 +69,8 @@ class Form extends React.Component {
               data-testid="attr2-input"
               value={ cardAttr2 }
               onChange={ onInputChange }
+              placeholder="1 a 90"
+
             />
           </label>
           <br />
@@ -77,11 +83,14 @@ class Form extends React.Component {
               data-testid="attr3-input"
               value={ cardAttr3 }
               onChange={ onInputChange }
+              placeholder="1 a 90"
+
             />
           </label>
           <br />
           <label htmlFor="imagem-carta">
             Imagem:
+            <br />
             <input
               name="cardImage"
               id="imagem-carta"
@@ -94,6 +103,7 @@ class Form extends React.Component {
           <br />
           <label htmlFor="raridade-carta">
             Escolha a raridade
+            <br />
             <select
               name="cardRare"
               data-testid="rare-input"
@@ -128,6 +138,7 @@ class Form extends React.Component {
           <button
             type="button"
             data-testid="save-button"
+            className="buttonSalvarForm"
             disabled={ isSaveButtonDisabled }
             onClick={ onSaveButtonClick }
           >
