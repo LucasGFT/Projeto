@@ -1,13 +1,35 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+<h2>Tryunfo</h2>
+Tryunfo é uma pagina web desenvolvida como projeto no curso de desenvolvimento web full stack da Trybe.
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+O projeto consiste em uma página web onde você consegue criar cartas de Tryunfo, quanto deletar cartas criadas
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Link: https://lucasgft.github.io/Tryunfo/
+
+---
+<h2>As Linguagens usadas são:</h2>
+<h4>React</h4>
+<h4>HTML</h4>
+<h4>CSS</h4>
+<h4>Javascipt</h4>
+
+<h3>Feito por mim:</h3>
+
+/src/components/Card.js
+
+/src/components/CardResult.js
+
+/src/components/Form.js
+
+/src/components/index.js.js
+
+/src/css/app.css
+
+/src/App.js
+
+/src/index.css
+
+/src/index.js
+
+<h3>Outros arquivos ja estavam</h3>
+
+Projeto feito no curso de Desenvolvimento Web Full Stack da Trybe
